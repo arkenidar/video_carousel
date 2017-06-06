@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+<head>
+<script type="text/javascript">jwplayer.key="HxcGUQpIepHUrMztIUBf9aY4gj2kEIjkL1EJmA==";</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider.min.js"></script>
+<script src="https://content.jwplatform.com/libraries/k468nv13.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css">
+
+<div class="gallery_content">
+<div class="content__wrapper">
+	<div id="vids_slider" class="flexslider">
+		<ul class="slides">
+			<li data-vid="1">
+				<div id="video_1"></div>
+			</li>
+			<li data-vid="2">
+				<div id="video_2"></div>
+			</li>
+			
+			<!-- repeated -->
+			<li data-vid="3">
+				<div id="video_3"></div>
+			</li>
+			<li data-vid="4">
+				<div id="video_4"></div>
+			</li>
+			<li data-vid="5">
+				<div id="video_5"></div>
+			</li>
+			<li data-vid="6">
+				<div id="video_6"></div>
+			</li>
+		</ul>
+	</div>
+	<div id="vids_carousel" class="flexslider carousel">
+		<ul class="slides">
+			<li><img src="https://placeimg.com/140/96/tech" alt=""></li>
+			<li><img src="https://placeimg.com/141/96/tech" alt=""></li>
+			
+			<!-- repeated -->
+			<li><img src="https://placeimg.com/140/96/tech" alt=""></li>
+			<li><img src="https://placeimg.com/141/96/tech" alt=""></li>
+			<li><img src="https://placeimg.com/140/96/tech" alt=""></li>
+			<li><img src="https://placeimg.com/141/96/tech" alt=""></li>
+		</ul>
+	</div>
+</div>
+</div>
+
+<script>
+jQuery(document).ready(function($) {
+	$('#pics_carousel').flexslider({
+		animation: "slide",
+		controlNav: true,
+        directionNav: false,
+		animationLoop: false,
+		slideshow: true,
+		itemWidth: 140,
+		itemMargin: 10,
+		maxItems: 3,
+		minItems: 4,
+		asNavFor: '#pics_slider'
+	});
+
+	$('#pics_slider').flexslider({
+		animation: "slide",
+		controlNav: false,
+        directionNav: true,
+		animationLoop: false,
+		slideshow: true,
+		sync: "#pics_carousel"
+	});
+
+	$('#vids_carousel').flexslider({
+		animation: "slide",
+		controlNav: true,
+        directionNav: false,
+		animationLoop: false,
+		slideshow: true,
+		itemWidth: 140,
+		itemMargin: 10,
+		//maxItems: 3,
+		minItems: 4,
+		asNavFor: '#vids_slider'
+	});
+
+	$('#vids_slider').flexslider({
+		animation: "slide",
+		controlNav: false,
+        directionNav: true,
+		animationLoop: false,
+		slideshow: true,
+		sync: "#vids_carousel"
+	});
+	
+	
+	jwplayer("video_1").setup({
+		flashplayer: "player.swf",
+		file: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+		width: 590,
+		height: 400,
+		stretching: "fill",
+		title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+		image: "https://placeimg.com/610/450/tech"
+	});
+	});
+	$(function() {
+	jwplayer("video_2").setup({
+		flashplayer: "player.swf",
+		file: "http://as1.asset.aparat.com/aparat-video/a_6c9nq52o0qplompnp6p3r64n60qo94n8q13qr7762169-582b__c2dbf.mp4",
+		width: 590,
+		height: 400,
+		stretching: "fill",
+		title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+		image: "https://placeimg.com/610/451/tech"
+	});
+	// repeat videos for filling...
+	jwplayer("video_3").setup({
+		flashplayer: "player.swf",
+		file: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+		width: 590,
+		height: 400,
+		stretching: "fill",
+		title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+		image: "https://placeimg.com/610/450/tech"
+	});
+	});
+	$(function() {
+	jwplayer("video_4").setup({
+		flashplayer: "player.swf",
+		file: "http://as1.asset.aparat.com/aparat-video/a_6c9nq52o0qplompnp6p3r64n60qo94n8q13qr7762169-582b__c2dbf.mp4",
+		width: 590,
+		height: 400,
+		stretching: "fill",
+		title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+		image: "https://placeimg.com/610/451/tech"
+	});
+	jwplayer("video_5").setup({
+		flashplayer: "player.swf",
+		file: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+		width: 590,
+		height: 400,
+		stretching: "fill",
+		title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+		image: "https://placeimg.com/610/450/tech"
+	});
+	});
+	$(function() {
+	jwplayer("video_6").setup({
+		flashplayer: "player.swf",
+		file: "http://as1.asset.aparat.com/aparat-video/a_6c9nq52o0qplompnp6p3r64n60qo94n8q13qr7762169-582b__c2dbf.mp4",
+		width: 590,
+		height: 400,
+		stretching: "fill",
+		title: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit",
+		image: "https://placeimg.com/610/451/tech"
+	});
+	
+	
+	
+	$(".flex-direction-nav a, .gallery_content .carousel li").on("click", function() {
+		$("#vids_slider ul.slides li:not('flex-active-slide')").each(function(i, obj) {
+			var vid = $(this).data("vid");
+			jwplayer("video_" + vid).pause(true);
+		});
+	});
+});
+</script>
+
+<style>
+body {
+	background: #f9f9f9;
+}
+.gallery_content {
+	background: #fff;
+	padding: 18px;
+	margin: 0 auto 20px;
+	width: 595px;
+	padding: 20px;
+	background: white;
+	.gallery_header {
+		padding: 4px 0 14px;
+		border-bottom: 2px solid #ff4500;
+		span {
+			font-size: 20px;
+			font-weight: 500;
+			padding: 10px 0 0;
+			color: #555555;
+		}
+		.tabs {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			li {
+				background: #eeeeee;
+				display: inline-block;
+				color: #999999;
+				padding: 8px 18px 6px;
+				font-size: 15px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				&:hover, &.active {
+					background: #ff4500;
+					color: #fff;
+					transition: all 0.3s ease;
+				}
+			}
+		}
+	}
+	.tab__content{
+		background-color: white;
+		position: relative;
+		height: 565px;
+		margin-bottom: 20px;
+		width: 100%;
+		border-radius: 5px;
+		> li{
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+			list-style: none;
+			.content__wrapper {
+			}
+		}
+	}
+	#pics_slider {
+		li {
+			position: relative;
+			h5 {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				padding: 9px 16px;
+				color: #fff;
+				font-weight: 400;
+				font-size: 19px;
+				line-height: 36px;
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(19%, rgba(0,0,0,0.2)), color-stop(40%, rgba(0,0,0,0.5)), color-stop(70%, rgba(0,0,0,0.8)), color-stop(100%, rgba(0,0,0,0.94)));
+				background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2) 19%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.94) 100%);
+				background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,0.2) 19%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.8) 70%, rgba(0,0,0,0.94) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f0000000',GradientType=0 );
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+	#pics_slider, #vids_slider {
+		margin-bottom: 10px;
+	}
+	.carousel {
+		li {
+			opacity: 0.8;
+			&.flex-active-slide {
+				opacity: 1;
+			}
+			img {
+				height: 100%;
+				cursor: pointer;
+			}
+		}
+	}
+}
+</style>
+
+</body>
+</html>
